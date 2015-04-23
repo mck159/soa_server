@@ -1,18 +1,14 @@
-package soa.agh.dziekanat; /**
+package dziekanat; /**
  * Created by root on 23.04.15.
  */
 
-import soa.agh.dziekanat.model.Student;
-import soa.agh.dziekanat.model.StudentsBase;
+import dziekanat.model.Student;
+import dziekanat.model.StudentsBase;
 
-import javax.ejb.Stateless;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
 import javax.jws.WebService;
-import java.util.ArrayList;
 import java.util.List;
 
-@Stateless
 @WebService
 public class Main {
     private StudentsBase students = new StudentsBase();
