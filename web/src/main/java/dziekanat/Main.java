@@ -6,6 +6,7 @@ import dziekanat.model.Student;
 import dziekanat.model.StudentsBase;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import java.util.List;
 
@@ -23,12 +24,12 @@ public class Main {
     }
 
     @WebMethod
-    public String hi(String name) {
+    public String hi(@WebParam(name="name")String name) {
         return "Hi " + name;
     }
 
     @WebMethod
-    public Student getStudent(String pesel) {
+    public Student getStudent(@WebParam(name="pesel") String pesel) {
         return students.findStudent(pesel);
     }
 
